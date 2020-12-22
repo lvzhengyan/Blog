@@ -62,7 +62,7 @@ document.getElementById('list').addEventListener('click', function (e) {
 
 如果调用这个方法，默认事件行为将不再触发。什么是默认事件呢？例如表单一点击提交按钮(submit)跳转页面、a标签默认页面跳转或是锚点定位等。
 
-在我的git仓库中也有着一个关于阻止默认事件的小Demo，[链接在](https://github.com/lvzhengyan/JavaScript-demo/blob/master/event/cancelScrollEvent.html)
+在我的git仓库中也有着一个关于阻止默认事件的小Demo，[点击这里查看](https://github.com/lvzhengyan/JavaScript-demo/blob/master/event/cancelScrollEvent.html)
 
 这是一个阻止滚动条滚动的Demo，同时支持PC和移动端
 
