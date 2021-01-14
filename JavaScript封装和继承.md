@@ -102,11 +102,12 @@ console.log(cat1.species);    // 动物
 ### 2.使用 prototype（原型链继承）
 ```
 Cat.prototype = new Animal();
-//任何一个prototype对象都有一个constructor属性，指向它的构造函数.如果没有"Cat.prototype = new Animal();"这一行，Cat.prototype.constructor是指向Cat的；加了这一行以后，Cat.prototype.constructor指向Animal。每一个实例也有一个constructor属性，默认调用prototype对象的constructor属性
 Cat.prototype.constructor = Cat;//手动纠正，将Cat.prototype对象的constructor值改回Cat
 var cat1 = new Cat("大毛","黄色");
 alert(cat1.species); // 动物
 ```
+
+任何一个prototype对象都有一个constructor属性，指向它的构造函数.如果没有"Cat.prototype = new Animal();"这一行，Cat.prototype.constructor是指向Cat的；加了这一行以后，Cat.prototype.constructor指向Animal。每一个实例也有一个constructor属性，默认调用prototype对象的constructor属性
 
 此方法中我们手动纠正了 constructor 属性，这是很重要的，再以后的编程中务必要遵守，即如果替换了 prototype 对象，那么，下一步必然是为新的prototype对象加上constructor属性，并将这个属性指回原来的构造函数。
 ```
